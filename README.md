@@ -14,6 +14,8 @@ $16 a $23 Variáveis salvas
 
 HI e LO são usados apenas em multiplicação
 
+
+
 **Operações Aritméticas**
 
 SOMA
@@ -76,6 +78,7 @@ PAR HI e LO recebe a multiplicação de numéros de 32bits, resultando em um de 
 
     mult $9, $10
 
+
 DIVISÃO
 
   div
@@ -93,6 +96,8 @@ DIVISÃO
   Exemplo:
 
     div $9, $10
+
+
 
 
 **Operações lógicas**
