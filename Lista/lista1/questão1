@@ -1,0 +1,13 @@
+
+.text
+main:
+	addi $2,$0, 5 # Usado como fun��o de print - $2 recebe o input, o 5 chama a fun��o do syscall
+	syscall 
+	add $8 ,$0, $2 # move para o $8 o valor de $2
+	
+	add $9, $8, $8
+	
+	addi $2,$0, 1
+	add $4,$0, $9 
+	syscall # imprimi o resultado
+	
