@@ -1,3 +1,0 @@
-**RESPOSTAS PARA AS QUESTÕES**
-
-
