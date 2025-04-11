@@ -1,7 +1,7 @@
 
 .text
 main:
-	addi $2,$0, 5 # Usado como fun��o de print - $2 recebe o input, o 5 chama a fun��o do syscall
+	addi $2,$0, 5 # Usado como funçãoo de print - $2 recebe o input, o 5 chama a fun��o do syscall
 	syscall 
 	add $8 ,$0, $2 # move para o $8 o valor de $2
 	
