@@ -1,0 +1,22 @@
+.text
+main:
+      addi $2, $0, 5   
+      syscall
+      add $8, $0, $2   
+  
+      addi $9, $0, 100      # Divisor = 100
+      div $8, $9         #divisão
+      mflo $10              #quociente
+      mfhi $11          	#resto
+      
+      addi $9, $0, 10       #Divisor 10
+      div $11, $9         # $11 % 10
+      mflo $12            #quociente 
+      mfhi $13           #resto
+      
+      add $14, $10, $12     #$14 = $10 + $ 12 - soma dos quocientes 
+      add $14, $14, $13    #$14 = $14 + $13 - soma do quociente com o resto
+      
+      add $4, $0, $14      
+      addi $2, $0, 1       
+      syscall
