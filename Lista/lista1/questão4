@@ -1,0 +1,22 @@
+.text
+main:
+      	addi $2, $0, 5 # $2 recebe o valor do input
+      	syscall # executa o input
+      	add $8, $0, $2 # move o valor de $2 para $8
+      	
+      	# repete para o segundo valor
+      	
+      	addi $2, $0, 5 
+      	syscall
+      	add $9, $0, $2 # armazenado na variável $9
+      	
+      	add $10, $8, $9   # $10 = $8 + $9
+      	addi $11, $0, 2   # $11 = 2
+      	
+      	div $10, $11   # $10 / 2 (valor de $11)
+      	
+      	mflo $12 # $12 = resultado da divisão
+      	
+      	addi $2, $0, 1 
+      	add $4, $0, $12
+      	syscall
