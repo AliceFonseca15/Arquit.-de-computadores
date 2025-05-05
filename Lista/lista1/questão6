@@ -1,0 +1,31 @@
+.text
+
+main:
+	addi $2, $0, 5
+	syscall
+	add $8, $0,$2 #7
+	
+	addi $9, $0, 100 #divisor
+	div $8,$9 # 7 / 100
+	mflo $10 #quociente = 0
+	mfhi $11 #resto = 07
+
+	addi $9,$0,10 
+	div $11,$9 #07 / 10
+	mflo $12 #quociente = 0
+	mfhi $13 #resto = 7
+	
+	addi $14,$10,48 #Converte para String e armazena em uma nova variavel
+	add $4,$0,$14  
+	addi $2,$0,11
+	syscall
+
+	addi $14,$12,48
+	add $4,$0,$14
+	addi $2,$0,11
+	syscall
+	
+	addi $14,$13,48
+	add $4,$0,$14
+	addi $2,$0,11
+	syscall
