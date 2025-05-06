@@ -1,0 +1,34 @@
+#   Faça um programa que leia um número inteiro e imprima -1 se o valor for ímpar e 0
+#   se o valor for par.
+.text
+main:
+
+	addi $2,$0,5
+	syscall
+	add $8,$0,$2
+	
+	addi $9,$0,100 # centena
+	
+	div $8,$9
+	mflo $10 # Quociente -> 1 numero
+	mfhi $12 # Resto ->
+	
+	addi $9,$0,10 # Dezena
+	
+	div $12,$9
+	mflo $13 # Quociente -> 2 numero
+	mfhi $14 # Resto -> 3 numero
+	
+	addi $9,$0,2 #  2 para saber se é impar ou par
+	
+	div $14,$9 # Divide por 2
+	mfhi $15
+
+	neg $16,$15  # Nega o valor de 1
+	
+	addi $2,$0,1
+	add $4,$0,$16
+	syscall
+	
+	addi $2,$0,10
+	syscall
