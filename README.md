@@ -12,7 +12,9 @@ $8 a $15 e $24/$25 Variáveis temporárias
 
 $16 a $23 Variáveis salvas
 
-HI e LO são usados apenas em multiplicação
+HI e LO são usados apenas em multiplicação e divisão
+mflo - Quociente
+mfhi - Resto
 
 
 
@@ -96,11 +98,20 @@ DIVISÃO
   Exemplo:
 
     div $9, $10
+    mflo $11 # quociente
+    mfhi $12 # resto
 
 
 
 
 **Operações lógicas**
+
+**AND**
+
+    and $8,$9,$10 # $8 = $9 and $10 -> resutado 0 ou 1
+
+  
+
 
 
 
