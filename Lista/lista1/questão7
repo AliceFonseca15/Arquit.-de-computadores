@@ -1,0 +1,53 @@
+.text
+main:
+	addi $2,$0,5
+	syscall
+	add $8,$0,$2
+	
+	addi $9,$0,1000 #divisor mihar
+	
+	div $8,$9
+	mflo $10 # quociente - primeiro valor a ser printado
+	mfhi $11
+	
+	addi $9,$0,100
+	
+	div $11,$9
+	mflo $11 # quociente - Segundo
+	mfhi $12
+	
+	addi $9,$0,10
+	
+	div $12,$9
+	mflo $13 # quociente- terceiro 
+	mfhi $14 # resto - quarto
+	
+	#PRINTS
+	
+	addi $2,$0,1 
+	add $4,$0,$10 # Print primeiro digito
+	syscall
+	
+	addi $4,$0,'\n'
+	addi $2,$0,11 # quebra de linha
+	syscall
+	
+	addi $2,$0,1
+	add $4,$0,$11 # Print segundo digito
+	syscall
+	
+	addi $4,$0,'\n'
+	addi $2,$0,11 #quebra de linha
+	syscall
+	
+	addi $2,$0,1
+	add $4,$0,$13 #Print terceiro digito
+	syscall
+	
+	addi $4,$0,'\n'
+	addi $2,$0,11 #quebra de linha
+	syscall
+	
+	addi $2,$0,1
+	add $4,$0,$14 #print quarto digito
+	syscall
