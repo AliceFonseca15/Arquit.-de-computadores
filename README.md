@@ -112,10 +112,22 @@ DIVISÃO
 
   
 
+**Estrutura de descisão**
 
+**slt** 
+significa Set on Less Than — ou seja, "define como 1 se for menor".
 
+    slt $10,$8,$9 # Testa se $8 < $9, $10 = 1 senão $10 = 0
 
+**beq**
+(branch if equal) é usada para desviar o fluxo de execução se dois registradores forem iguais.
+    
+    beq $10,$0,maior # se $10 == 1 vai para maior, senão continua
 
+**bne**
+ significa "branch if not equal", ou seja, "desvia se for diferente".
+
+   
 
 
 
